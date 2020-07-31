@@ -1,0 +1,124 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 650px;
+  padding-top: 35px;
+
+  background: #6d99ca url("../../img/header-bg-desktop@1x.jpg") no-repeat;
+  background-size: 100% 650px;
+
+  @media #{$tablet-width} {
+    min-height: 638px;
+    padding-top: 30px;
+
+    background-image: url("../../img/header-bg-tablet@1x.jpg");
+    background-size: 100% 638px;
+  }
+
+  @media #{$mobile-width} {
+    min-height: 500px;
+    padding-top: 20px;
+
+    background-image: url("../../img/header-bg-mobile@1x.jpg");
+    background-size: 100% 500px;
+    background-position: bottom;
+
+    &--nojs {
+      min-height: 650px;
+    }
+  }
+}
+
+.header__container {
+  @include container;
+  min-width: 100%;
+}
+
+.header__top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 193px;
+
+  @media #{$tablet-width} {
+    margin-bottom: 214px;
+  }
+
+  @media #{$mobile-width} {
+    margin-right: -15px;
+    margin-bottom: 156px;
+    margin-left: -15px;
+
+    &--nojs {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.header__logo {
+  @media #{$mobile-width} {
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+  }
+}
+
+.header__logo-img {
+  fill: $light;
+
+  @media #{$tablet-width} {
+    @include size(38px, 20px);
+  }
+
+  @media #{$mobile-width} {
+    @include size(42px, 22px);
+
+    fill: $dark;
+
+    &--light {
+      fill: $light;
+    }
+  }
+}
+
+.header__middle-wrapper {
+  padding-left: 95px;
+
+  @media #{$tablet-width} {
+    padding-left: 0;
+  }
+}
+
+.header__middle-wrapper h1 {
+  @include clear-block;
+  margin-bottom: 12px;
+
+  @include font(700, 54px, 66px, $font-montserrat);
+  color: $light;
+
+  @media #{$tablet-width} {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  @media #{$mobile-width} {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+.header__middle-wrapper p {
+  @include clear-block;
+  @include font(400, 20px, 24px, $font-montserrat);
+  color: $light;
+
+  @media #{$tablet-width} {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @media #{$mobile-width} {
+    max-width: 220px;
+
+    font-size: 16px;
+  }
+}

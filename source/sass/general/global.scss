@@ -16,13 +16,11 @@ body {
   margin: 0;
   padding: 0;
 
-  @include font(400, 16px, 28px, $font-montserrat);
-
   background-color: #ffffff;
 }
 
 a {
-  color: #ffffff;
+  color: $light;
 
   text-decoration: none;
 }

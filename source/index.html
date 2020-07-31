@@ -8,6 +8,35 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <div style="display: none;">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+  <header class="header header--nojs">
+    <div class="header__container">
+      <div class="header__top-wrapper header__top-wrapper--nojs">
+        <a class="header__logo">
+          <svg class="header__logo-img" width="70" height="38">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+          <!-- <img src="img/logo.svg" width="70" height="38" alt="Снежные горы"> -->
+        </a>
+        <nav class="header__nav nav nav--nojs">
+          <ul class="nav__links">
+            <li><a class="nav__link" href="#">Преимущества</a></li>
+            <li><a class="nav__link" href="#">Направления</a></li>
+            <li><a class="nav__link" href="#">Ближайшие круизы</a></li>
+            <li><a class="nav__link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="header__burger"></div>
+      </div>
+      <div class="header__middle-wrapper">
+        <h1>Круизы в&nbsp;Антарктику</h1>
+        <p>Волшебный мир айсбергов и пингвинов</p>
+      </div>
+    </div>
+  </header>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

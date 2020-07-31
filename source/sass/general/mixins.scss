@@ -56,12 +56,19 @@
 }
 
 @mixin container {
-  max-width: 1300px;
+  max-width: 1160px;
   margin: 0 auto;
-  padding-left: 65px;
+  padding-right: 103px;
+  padding-left: 103px;
 
   @media #{$tablet-width} {
-    padding-left: 0;
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
+  @media #{$mobile-width} {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 

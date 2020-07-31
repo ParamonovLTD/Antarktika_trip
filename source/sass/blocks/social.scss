@@ -1,0 +1,32 @@
+.social {
+  @include clear-list;
+
+  display: flex;
+  justify-content: space-between;
+  min-width: 117px;
+
+  @media #{$tablet-width} {
+    min-width: 87px;
+  }
+
+  @media #{$mobile-width} {
+    min-width: initial;
+    max-width: 87px;
+  }
+}
+
+.social__img {
+  @media #{$tablet-width} {
+    &--fb {
+      @include size(9px, 16px);
+    }
+
+    &--inst {
+      @include size(16px, 16px);
+    }
+
+    &--twitter {
+      @include size(16px, 13px);
+    }
+  }
+}

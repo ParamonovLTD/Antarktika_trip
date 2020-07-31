@@ -23,16 +23,14 @@
 }
 
 @mixin title {
-  position: relative;
-
   @include clear-block;
-  @include font(600, 55px, 80px, $font-montserrat);
+  @include font(600, 28px, 42px, $font-montserrat);
+  text-align: center;
   color: $dark;
 
   @media #{$tablet-width} {
-    font-size: 30px;
-    line-height: 45px;
-    letter-spacing: 0;
+    font-size: 26px;
+    line-height: 39px;
   }
 
   @media #{$mobile-width} {
@@ -41,19 +39,6 @@
   }
 }
 
-@mixin title-underline {
-  position: absolute;
-
-  @include size(175px, 3px);
-
-  background-color: $main-accent;
-}
-
-@mixin subtitle {
-  @include clear-block;
-  @include font(600, 18px, 32px, $font-montserrat);
-  color: $dark;
-}
 
 @mixin container {
   max-width: 1366px;

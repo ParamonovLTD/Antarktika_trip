@@ -76,11 +76,11 @@
 .about__container img {
   @media #{$tablet-width} {
     @include size(324px, 264px);
-    padding-top: 9px;
+    margin-top: 9px;
   }
 
   @media #{$mobile-width} {
     @include size(290px, 186px);
-    padding-top: 0;
+    margin-top: 0;
   }
 }

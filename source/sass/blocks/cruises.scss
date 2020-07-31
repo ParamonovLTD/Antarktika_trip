@@ -1,0 +1,28 @@
+.cruises {
+  min-height: 1000px;
+  padding-top: 112px;
+  padding-bottom: 120px;
+
+  @media #{$tablet-width} {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  @media #{$mobile-width} {
+    padding-top: 57px;
+    padding-bottom: 65px;
+  }
+}
+
+.cruises__container {
+  @include container;
+}
+
+.cruises__container h2 {
+  @include title;
+  margin-bottom: 49px;
+
+  @media #{$mobile-width} {
+    margin-bottom: 30px;
+  }
+}

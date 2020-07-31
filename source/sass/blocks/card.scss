@@ -1,0 +1,145 @@
+.card {
+  position: relative;
+
+  min-width: 260px;
+  min-height: 386px;
+
+  transition: 0.5s;
+  overflow: hidden;
+
+  &:hover {
+    background-color: $dark;
+  }
+
+  &:not(:nth-of-type(n + 5)) {
+    margin-bottom: 30px;
+  }
+
+  @media #{$tablet-width} {
+    min-width: 309px;
+
+    &:not(:nth-of-type(n + 5)) {
+      margin-bottom: 0;
+    }
+
+    &:nth-last-of-type(n + 3) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media #{$mobile-width} {
+    min-width: 270px;
+
+    &:nth-last-of-type(n + 3) {
+      margin-bottom: 0;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.card:hover .card__info {
+  top: 22px;
+
+  padding-left: 25px;
+
+  @media #{$tablet-width} {
+    padding-left: 35px;
+  }
+
+  @media #{$mobile-width} {
+    padding-left: 25px;
+  }
+}
+
+.card:hover .card__info-list {
+  opacity: 1;
+}
+
+.card__image h3 {
+  @include clear-block;
+}
+
+.card__image img {
+  position: absolute;
+  z-index: -1;
+
+  @media #{$tablet-width} {
+    @include size(309px, 386px);
+  }
+
+  @media #{$mobile-width} {
+    @include size(270px, 386px);
+  }
+}
+
+.card__info {
+  position: absolute;
+  top: 330px;
+
+  padding-top: 7px;
+  padding-right: 25px;
+  padding-left: 30px;
+
+  transition: 0.5s;
+
+  @media #{$tablet-width} {
+    top: 325px;
+
+    padding-right: 35px;
+    padding-left: 36px;
+  }
+
+  @media #{$mobile-width} {
+    top: 335px;
+
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+.card__info h3 {
+  @include clear-block;
+  margin-bottom: 13px;
+
+  @include font(500, 18px, 27px, $font-montserrat);
+  color: $light;
+}
+
+.card__info-list {
+  @include clear-list;
+  margin-bottom: 25px;
+
+  opacity: 0;
+}
+
+.card__info-item h4 {
+  @include clear-block;
+  margin-bottom: 1px;
+
+  @include font(500, 14px, 20px, $font-montserrat);
+  color: $light;
+}
+
+.card__info-item p {
+  @include clear-block;
+  margin-bottom: 11px;
+
+  @include font(500, 14px, 20px, $font-montserrat);
+  font-weight: 400;
+  color: $grey;
+}
+
+.card__button {
+  width: 100%;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 9px;
+
+  @include font(600, 14px, 21px, $font-montserrat);
+  color: $dark;
+
+  border: 0;
+}

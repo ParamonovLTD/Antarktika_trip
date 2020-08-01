@@ -1,0 +1,151 @@
+.contacts {
+  padding-top: 120px;
+  padding-bottom: 116px;
+
+  @media #{$tablet-width} {
+    padding-top: 100px;
+    padding-bottom: 96px;
+  }
+
+  @media #{$mobile-width} {
+    padding-top: 20px;
+    padding-bottom: 61px;
+  }
+}
+
+.contacts__container {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+
+  @media #{$mobile-width} {
+    flex-direction: column;
+  }
+}
+
+.contacts__container h2 {
+  @include visually-hidden;
+}
+
+.contacts__map-wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 217px;
+    left: 249px;
+
+    @include size(18px, 22px);
+
+    background: url("../../img/icon-pin.svg") no-repeat 0 0;
+  }
+
+  @media #{$tablet-width} {
+    &::before {
+      top: 218px;
+      left: 109px;
+    }
+  }
+
+  @media #{$mobile-width} {
+    &::before {
+      top: 224px;
+      left: 112px;
+    }
+  }
+}
+
+.contacts__map-wrapper img,
+.contacts__map-wrapper div {
+  @include size(560px, 306px);
+
+  @media #{$tablet-width} {
+    @include size(324px, 335px);
+  }
+
+  @media #{$mobile-width} {
+    @include size(290px, 316px);
+  }
+}
+
+.contacts__text-wrapper {
+  max-width: 500px;
+  padding-top: 75px;
+
+  @media #{$tablet-width} {
+    max-width: 324px;
+    padding-top: 66px;
+  }
+
+  @media #{$mobile-width} {
+    order: -1;
+    margin-bottom: 35px;
+    padding-top: 38px;
+  }
+}
+
+.contacts__text-wrapper p {
+  @include clear-block;
+  margin-bottom: 32px;
+
+  @include font(500, 18px, 27px, $font-montserrat);
+  color: $dark;
+
+  @media #{$tablet-width} {
+    margin-bottom: 28px;
+  }
+}
+
+.contacts__info-wrapper {
+  padding-left: 28px;
+
+  @include font(400, 16px, 24px, $font-montserrat);
+  color: $dark;
+
+  @media #{$tablet-width} {
+    max-width: 285px;
+  }
+}
+
+.contacts__info-wrapper address,
+.contacts__info-wrapper a {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -28px;
+  }
+}
+
+.contacts__info-wrapper address {
+  margin-bottom: 21px;
+
+  font-style: normal;
+
+  &::before {
+    @include size(18px, 22px);
+
+    background: url("../../img/icon-pin.svg") no-repeat 0 0;
+  }
+
+  @media #{$tablet-width} {
+    &::before {
+      top: 4px;
+    }
+  }
+}
+
+.contacts__info-wrapper a {
+  color: $dark;
+
+  &::before {
+    @include size(18px, 18px);
+
+    background: url("../../img/icon-phone.svg") no-repeat 0 0;
+  }
+}

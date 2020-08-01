@@ -1,0 +1,87 @@
+.form input[type="text"],
+.form input[type="tel"],
+.form input[type="mailto"] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 13px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+
+  border: none;
+
+  &::placeholder {
+    @include font(400, 14px, 21px, $font-montserrat);
+    color: $dark;
+  }
+}
+
+.form__check {
+  margin-bottom: 30px;
+
+  @media #{$mobile-width} {
+    display: flex;
+    margin-bottom: 26px;
+  }
+}
+
+.form__check input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+
+  opacity: 0;
+}
+
+.form__check input:checked ~ label::before {
+  background: $light url("../../img/icon-checkmark.svg") no-repeat 3px 5px;
+
+  @media #{$mobile-width} {
+    background-position: 4px 6px;
+  }
+}
+
+.form__check label {
+  position: relative;
+
+  padding-left: 23px;
+
+  @include font(400, 10px, 13px, $font-montserrat);
+  color: $light;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -4px;
+    left: 0;
+
+    @include size(18px, 18px);
+
+    background-color: $light;
+  }
+
+  @media #{$mobile-width} {
+    padding-left: 28px;
+
+    text-align: left;
+    line-height: 12px;
+
+    &::before {
+      top: 0;
+
+      @include size(20px, 20px);
+    }
+  }
+}
+
+.form input[type="submit"] {
+  width: 100%;
+  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 10px;
+
+  @include font(600, 14px, 21px, $font-montserrat);
+  color: $dark;
+
+  border: none;
+}

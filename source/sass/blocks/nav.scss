@@ -1,6 +1,7 @@
 .nav {
   @media #{$mobile-width} {
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
 
@@ -73,6 +74,10 @@
 .nav__link {
   @include font(500, 16px, 20px, $font-montserrat);
 
+  &:hover {
+    border-bottom: 1px solid $light;
+  }
+
   @media #{$tablet-width} {
     font-size: 14px;
     line-height: 17px;
@@ -90,6 +95,7 @@
 
   @media #{$mobile-width} {
     position: absolute;
+    z-index: 2;
     top: 24px;
     right: 14px;
 

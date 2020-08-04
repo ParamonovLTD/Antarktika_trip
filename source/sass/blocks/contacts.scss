@@ -20,6 +20,7 @@
 
   @media #{$mobile-width} {
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -29,6 +30,8 @@
 
 .contacts__map-wrapper {
   position: relative;
+
+  margin-right: 40px;
 
   &::before {
     content: "";
@@ -43,6 +46,8 @@
   }
 
   @media #{$tablet-width} {
+    margin-right: 20px;
+
     &::before {
       top: 218px;
       left: 109px;
@@ -50,6 +55,8 @@
   }
 
   @media #{$mobile-width} {
+    margin-right: 0;
+
     &::before {
       top: 224px;
       left: 112px;

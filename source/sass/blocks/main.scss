@@ -1,0 +1,12 @@
+.main {
+  min-height: 100%;
+  margin-bottom: -136px;
+
+  @media #{$tablet-width} {
+    margin-bottom: -120px;
+  }
+
+  @media #{$mobile-width} {
+    margin-bottom: -283px;
+  }
+}

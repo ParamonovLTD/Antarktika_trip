@@ -5,12 +5,20 @@
   background: #e1ebf6 url("../../img/advantages-bg-desktop@1x.jpg") no-repeat 0 0;
   background-size: 100% 562px;
 
+  @media #{$retina-dppx} {
+    background-image: url("../../img/advantages-bg-desktop@2x.jpg");
+  }
+
   @media #{$tablet-width} {
     padding-top: 90px;
     padding-bottom: 100px;
 
     background-image: url("../../img/advantages-bg-tablet@1x.jpg");
     background-size: 100% 588px;
+
+    @media #{$retina-dppx} {
+      background-image: url("../../img/advantages-bg-tablet@2x.jpg");
+    }
   }
 
   @media #{$mobile-width} {
@@ -19,6 +27,10 @@
 
     background-image: url("../../img/advantages-bg-mobile@1x.jpg");
     background-size: 100% 997px;
+
+    @media #{$retina-dppx} {
+      background-image: url("../../img/advantages-bg-mobile@2x.jpg");
+    }
   }
 }
 
@@ -43,13 +55,14 @@
 
   @media #{$mobile-width} {
     flex-direction: column;
+    align-items: center;
   }
 }
 
 .advantages__item {
   position: relative;
 
-  flex-basis: 31%;
+  width: 31%;
   padding-top: 81px;
   padding-right: 20px;
   padding-bottom: 25px;
@@ -89,7 +102,7 @@
   }
 
   @media #{$tablet-width} {
-    flex-basis: 30.3%;
+    width: 30.3%;
     padding-top: 70px;
     padding-right: 10px;
     padding-bottom: 20px;
@@ -119,6 +132,7 @@
   }
 
   @media #{$mobile-width} {
+    width: 290px;
     margin-bottom: 30px;
   }
 }

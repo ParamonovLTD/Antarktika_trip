@@ -1,6 +1,6 @@
 .about {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 116px;
 
   @media #{$tablet-width} {
     padding-top: 91px;
@@ -9,7 +9,7 @@
 
   @media #{$mobile-width} {
     padding-top: 57px;
-    padding-bottom: 65px;
+    padding-bottom: 61px;
   }
 }
 
@@ -21,12 +21,14 @@
 
   @media #{$mobile-width} {
     flex-direction: column;
+    align-items: center;
   }
 }
 
 .about__text-wrapper {
   display: flex;
   flex-direction: column;
+  max-width: 520px;
   padding-top: 56px;
 
   @media #{$tablet-width} {

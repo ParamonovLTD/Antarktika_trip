@@ -1,8 +1,5 @@
-.form input[type="text"],
-.form input[type="tel"],
-.form input[type="mailto"] {
+.form__input-control > input {
   width: 100%;
-  margin-bottom: 20px;
   padding-top: 13px;
   padding-right: 16px;
   padding-bottom: 12px;
@@ -14,6 +11,36 @@
     @include font(400, 14px, 21px, $font-montserrat);
     color: $dark;
   }
+}
+
+.form__input-control {
+  position: relative;
+
+  margin-bottom: 20px;
+
+  &--error {
+    border: 2px solid #fc0001;
+  }
+}
+
+.form__input-control small {
+  position: absolute;
+  top: -17px;
+  left: 0;
+
+  display: none;
+
+  @include font(400, 10px, 13px, $font-montserrat);
+  color: #fc0001;
+}
+
+.form__input-control--error small {
+  display: block;
+}
+
+.form__input-control--error > input {
+  padding-top: 11px;
+  padding-bottom: 10px;
 }
 
 .form__check {
@@ -47,6 +74,12 @@
 
   @include font(400, 10px, 13px, $font-montserrat);
   color: $light;
+
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 
   &::before {
     content: "";
@@ -84,4 +117,6 @@
   color: $dark;
 
   border: none;
+
+  cursor: pointer;
 }

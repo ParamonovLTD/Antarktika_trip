@@ -2,22 +2,22 @@
   padding-top: 110px;
   padding-bottom: 120px;
 
-  background: #e1ebf6 url("../../img/advantages-bg-desktop@1x.jpg") no-repeat 0 0;
+  background: #e1ebf6 url("../img/advantages-bg-desktop@1x.jpg") no-repeat 0 0;
   background-size: 100% 562px;
 
   @media #{$retina-dppx} {
-    background-image: url("../../img/advantages-bg-desktop@2x.jpg");
+    background-image: url("../img/advantages-bg-desktop@2x.jpg");
   }
 
   @media #{$tablet-width} {
     padding-top: 90px;
     padding-bottom: 100px;
 
-    background-image: url("../../img/advantages-bg-tablet@1x.jpg");
+    background-image: url("../img/advantages-bg-tablet@1x.jpg");
     background-size: 100% 588px;
 
     @media #{$retina-dppx} {
-      background-image: url("../../img/advantages-bg-tablet@2x.jpg");
+      background-image: url("../img/advantages-bg-tablet@2x.jpg");
     }
   }
 
@@ -25,11 +25,11 @@
     padding-top: 57px;
     padding-bottom: 34px;
 
-    background-image: url("../../img/advantages-bg-mobile@1x.jpg");
+    background-image: url("../img/advantages-bg-mobile@1x.jpg");
     background-size: 100% 997px;
 
     @media #{$retina-dppx} {
-      background-image: url("../../img/advantages-bg-mobile@2x.jpg");
+      background-image: url("../img/advantages-bg-mobile@2x.jpg");
     }
   }
 }
@@ -82,7 +82,7 @@
 
     @include size(27px, 32px);
 
-    background: url("../../img/icon-ship.svg") no-repeat 0 0;
+    background: url("../img/icon-ship.svg") no-repeat 0 0;
   }
 
   &--system::before {
@@ -90,7 +90,7 @@
 
     @include size(38px, 21px);
 
-    background: url("../../img/icon-double-checkmark.svg") no-repeat 0 0;
+    background: url("../img/icon-double-checkmark.svg") no-repeat 0 0;
   }
 
   &--tours::before {
@@ -98,7 +98,7 @@
 
     @include size(42px, 15px);
 
-    background: url("../../img/icon-boat.svg") no-repeat 0 0;
+    background: url("../img/icon-boat.svg") no-repeat 0 0;
   }
 
   @media #{$tablet-width} {

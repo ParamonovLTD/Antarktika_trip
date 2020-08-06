@@ -19,8 +19,13 @@
   display: flex;
   justify-content: space-between;
 
+  @media #{$tablet-width} {
+    justify-content: space-evenly;
+  }
+
   @media #{$mobile-width} {
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -29,6 +34,7 @@
   display: flex;
   flex-direction: column;
   max-width: 520px;
+  margin-right: 20px;
   padding-top: 56px;
 
   @media #{$tablet-width} {

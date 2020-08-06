@@ -11,7 +11,7 @@
     padding-top: 20px;
 
     &--nojs {
-      min-height: 650px;
+      min-height: 450px;
     }
   }
 }
@@ -42,6 +42,12 @@
 }
 
 .header__logo {
+  margin-right: 40px;
+
+  @media #{$tablet-width} {
+    @include size(38px, 20px);
+  }
+
   @media #{$mobile-width} {
     position: absolute;
     z-index: 2;
@@ -53,7 +59,7 @@
   fill: $light;
 
   @media #{$tablet-width} {
-    @include size(38px, 20px);
+    // @include size(38px, 20px);
   }
 
   @media #{$mobile-width} {

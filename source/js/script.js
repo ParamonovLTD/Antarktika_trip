@@ -116,16 +116,28 @@ function formValidityCheck (currentFormWrapper) {
 formValidityCheck(feedback);
 
 function formInputsValidityCheck (currentForm) {
+  const name = currentForm.querySelector('input[name="Name"]');
   const phone = currentForm.querySelector('input[type="tel"]');
   const mail = currentForm.querySelector('input[type="email"]');
+  const check = currentForm.querySelector('input[type="checkbox"]');
+  const nameValue = name.value.trim();
   const phoneValue = phone.value.trim();
   const mailValue = mail.value.trim();
   let phoneValueSplited;
+  let isNameValid = false;
   let isPhoneValid = false;
   let isMailValid = true;
+  let isChecked = false;
 
   if (phoneValue) {
     phoneValueSplited = phoneValue.split('+')[1].split(' ').join('').trim();
+  }
+
+  if (nameValue !== '') {
+    isNameValid = true;
+    setSuccessFor(name);
+  } else {
+    setErrorFor(name, 'Данные не верны');
   }
 
   if (phoneValue && phoneValueSplited.length !== 11) {
@@ -137,14 +149,21 @@ function formInputsValidityCheck (currentForm) {
     setSuccessFor(phone);
   }
 
-  if (!mailValue.includes('@') && mailValue !== '') {
+  if (!mailValue.includes('@') || mailValue === '') {
     isMailValid = false;
     setErrorFor(mail, 'Данные не верны');
   } else {
     setSuccessFor(mail);
   }
 
-  return isPhoneValid && isMailValid;
+  if (check.checked) {
+    isChecked = true;
+    setSuccessFor(check);
+  } else {
+    setErrorFor(check, 'У вас нет выбора)');
+  }
+
+  return isPhoneValid && isMailValid && isNameValid && isChecked;
 }
 
 

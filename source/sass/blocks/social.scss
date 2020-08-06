@@ -16,6 +16,12 @@
 }
 
 .social__img {
+  &:hover {
+    transform: scale(1.15);
+  }
+
+  transition: transform 0.3s;
+
   @media #{$tablet-width} {
     &--fb {
       @include size(9px, 16px);

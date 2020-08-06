@@ -5,7 +5,9 @@
   padding-bottom: 12px;
   padding-left: 16px;
 
+  background-color: $light;
   border: none;
+  border-radius: 0;
 
   &::placeholder {
     @include font(400, 14px, 21px, $font-montserrat);
@@ -19,11 +21,12 @@
   margin-bottom: 20px;
 
   &--error {
-    border: 2px solid #fc0001;
+    outline: 2px solid #fc0001;
   }
 }
 
-.form__input-control small {
+.form__input-control small,
+.form__check small {
   position: absolute;
   top: -17px;
   left: 0;
@@ -38,12 +41,9 @@
   display: block;
 }
 
-.form__input-control--error > input {
-  padding-top: 11px;
-  padding-bottom: 10px;
-}
-
 .form__check {
+  position: relative;
+
   margin-bottom: 30px;
 
   @media #{$mobile-width} {
@@ -60,7 +60,7 @@
 }
 
 .form__check input:checked ~ label::before {
-  background: $light url("../../img/icon-checkmark.svg") no-repeat 3px 5px;
+  background: $light url("../img/icon-checkmark.svg") no-repeat 3px 5px;
 
   @media #{$mobile-width} {
     background-position: 4px 6px;
@@ -116,6 +116,7 @@
   @include font(600, 14px, 21px, $font-montserrat);
   color: $dark;
 
+  background-color: $light;
   border: none;
 
   cursor: pointer;

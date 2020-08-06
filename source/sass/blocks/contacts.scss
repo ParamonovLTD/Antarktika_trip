@@ -42,7 +42,7 @@
 
     @include size(18px, 22px);
 
-    background: url("../../img/icon-pin.svg") no-repeat 0 0;
+    background: url("../img/icon-pin.svg") no-repeat 0 0;
   }
 
   @media #{$tablet-width} {
@@ -137,7 +137,7 @@
   &::before {
     @include size(18px, 22px);
 
-    background: url("../../img/icon-pin.svg") no-repeat 0 0;
+    background: url("../img/icon-pin.svg") no-repeat 0 0;
   }
 
   @media #{$tablet-width} {
@@ -150,9 +150,13 @@
 .contacts__info-wrapper a {
   color: $dark;
 
+  &:hover {
+    border-bottom: 1px solid $dark;
+  }
+
   &::before {
     @include size(18px, 18px);
 
-    background: url("../../img/icon-phone.svg") no-repeat 0 0;
+    background: url("../img/icon-phone.svg") no-repeat 0 0;
   }
 }

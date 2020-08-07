@@ -54,11 +54,11 @@
       background-size: 100% 500px;
       background-position: bottom;
     }
-  }
 
-  @media #{$retina-dppx} {
-    &::before {
-      background-image: url("../img/promo-bg-mobile@2x.jpg");
+    @media #{$retina-dppx} {
+      &::before {
+        background-image: url("../img/promo-bg-mobile@2x.jpg");
+      }
     }
   }
 }

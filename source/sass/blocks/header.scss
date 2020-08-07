@@ -59,7 +59,7 @@
   fill: $light;
 
   @media #{$tablet-width} {
-    // @include size(38px, 20px);
+    @include size(38px, 20px);
   }
 
   @media #{$mobile-width} {
